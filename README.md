@@ -25,11 +25,22 @@ const populatedUrl = populateUrl(ROUTES.testRoute, {
 console.log(populatedUrl); // /test/null/foo/test?id=123
 ```
 
-### Examples of supported URL formats
+### Examples of valid URL formats
 
 ```
-http://test.com/path/:param/?id=:id&test=:test
+http://test.com/path/:param1/:param2/?id=:id&test=:test
 
+/test.com/path/:param1/:param2/?id=:id&test=:test
+
+test.com/path/:param1/:param2/?id=:id&test=:test
+
+test.com/path/:param1/:param2?id=:id&test=:test
+
+/path/:param1/:param2?id=:id&test=:test
+
+path/:param1/:param2?id=:id&test=:test
+
+path/:param1/:param2
 ```
 
 ## TS Hints Support
