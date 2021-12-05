@@ -1,4 +1,4 @@
-# @bamblehorse/tiny
+# @bbfan/populate-url
 
 Helps to populate your URL with path and query parameters.
 Has a TS support, that parse constant templates and shows expected parameters.

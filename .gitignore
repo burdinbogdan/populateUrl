@@ -394,8 +394,4 @@ Temporary Items
 
 =======
 # Local
-.env
 dist
-
-documentation
-.dccache

@@ -1,4 +1,4 @@
-import { populateUrl } from './populateUrl';
+import { populateUrl } from '.';
 
 const url1 = '/test/:testId';
 const url2 = '/test/:testId/';
