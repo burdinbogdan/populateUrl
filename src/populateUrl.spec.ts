@@ -120,6 +120,15 @@ describe('Populate url', () => {
       },
       expectedUrl: 'http://some-url.com/test/foo?type=bar',
     },
+    {
+      url: 'http://some-url.com/test/:testId?type=:type&status=:status',
+      params: {
+        testId: 'foo',
+        type: 'bar',
+        status: 'active',
+      },
+      expectedUrl: 'http://some-url.com/test/foo?type=bar&status=active',
+    },
   ])('Populating of "$url" with the next params $params', ({ url, params, expectedUrl }) => {
     const result = populateUrl(url, params);
     expect(result).toBe(expectedUrl);

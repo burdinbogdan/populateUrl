@@ -1,7 +1,7 @@
 type TQueryParams<S extends string> = S extends `${string}=:${infer U}`
-  ? { [key in SplitBySlash<U>]: string | number } & TUrlParams<U>
+  ? { [key in SplitByAnd<U>]: string | number } & TQueryParams<U>
   : S extends `${string}=:${string}`
-  ? { [key in SplitBySlash<S>]: string | number }
+  ? { [key in SplitByAnd<S>]: string | number }
   : {};
 
 type TUrlParams<S extends string> = S extends `${string}/:${infer U}`
@@ -10,7 +10,13 @@ type TUrlParams<S extends string> = S extends `${string}/:${infer U}`
   ? { [key in SplitBySlash<S>]: string | number }
   : {};
 
-type SplitBySlash<S extends string> = S extends `${infer T}${'/'}${string}`
+type SplitBySlash<S extends string> = S extends `${infer T}/${string}`
+  ? T extends ''
+    ? null
+    : T
+  : S;
+
+type SplitByAnd<S extends string> = S extends `${infer T}&${string}`
   ? T extends ''
     ? null
     : T
@@ -33,6 +39,6 @@ export const populateUrl = <
   params: K,
 ): string =>
   url.replace(
-    /(:([^\/]+?))(\/|\?|$)/g,
+    /(:([^\/$]+?))(\/|\?|&|$)/g,
     (_, __, path: string, slash: string) => params[path] + slash,
   );
