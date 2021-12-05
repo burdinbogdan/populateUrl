@@ -1,0 +1,58 @@
+{
+  "name": "@bbfan/populate-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "27.0.3",
+    "@typescript-eslint/eslint-plugin": "5.5.0",
+    "@typescript-eslint/parser": "5.5.0",
+    "eslint": "8.4.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jest": "25.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "husky": "7.0.4",
+    "jest": "27.4.3",
+    "jest-extended": "1.2.0",
+    "lint-staged": "12.1.2",
+    "prettier": "2.5.1",
+    "ts-jest": "27.1.0",
+    "typescript": "4.5.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.{md,json}": [
+      "prettier --write"
+    ]
+  }
+}
