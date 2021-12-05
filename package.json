@@ -1,15 +1,25 @@
 {
   "name": "@bbfan/populate-url",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Helps to manage your URL templates and populate parameters to it. Has a TS type validation that shows required template params to be filled.",
+  "license": "MIT",
   "main": "index.js",
+  "author": "Bogdan Burdin",
+  "repository": "https://github.com/burdinbogdan/populateUrl",
+  "keywords": [
+    "npm",
+    "package",
+    "bbfan",
+    "populate",
+    "URL",
+    "link",
+    "template"
+  ],
   "scripts": {
     "test": "jest ",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/jest": "27.0.3",
     "@typescript-eslint/eslint-plugin": "5.5.0",
