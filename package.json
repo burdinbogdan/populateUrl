@@ -1,6 +1,6 @@
 {
   "name": "@bbfan/populate-url",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Helps to manage your URL templates and populate parameters to it. Has a TS type validation that shows required template params to be filled.",
   "license": "MIT",
   "main": "dist/index.js",

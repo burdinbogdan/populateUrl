@@ -6,7 +6,7 @@ Has a TS support, that parse constant templates and shows expected parameters.
 ## Install
 
 ```
-$ npm install @bbfan/populateUrl
+$ npm install @bbfan/populate-url
 ```
 
 ## Usage
